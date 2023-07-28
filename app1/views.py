@@ -34,6 +34,9 @@ def login_page(request):
             login(request,user)
             return redirect('home')
         else:
-            return HttpResponse("username or password is incorret")
-        
+            return HttpResponse("username or password is incorret") 
     return render(request,"app1/login.html")
+
+def LogoutPage(request):
+    logout(request)
+    return redirect('login')
